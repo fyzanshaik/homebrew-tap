@@ -1,8 +1,8 @@
 class Cachewatch < Formula
   desc "Menu bar observability for Claude Code sessions: cache TTLs, quota, memory"
   homepage "https://github.com/fyzanshaik/cachewatch"
-  url "https://github.com/fyzanshaik/cachewatch/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "507712dd89ce22ffd130ce52f2a3e73d045e86bbe12be41f59592eaf984dbdc1"
+  url "https://github.com/fyzanshaik/cachewatch/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "bdf66de221bf084057705f56b9c06a3475d4270b5be49c186f5e50214c830e4b"
   license "MIT"
 
   depends_on macos: :sequoia
