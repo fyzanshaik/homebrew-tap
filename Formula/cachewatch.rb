@@ -8,7 +8,9 @@ class Cachewatch < Formula
   depends_on macos: :sequoia
 
   def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
+    # Absolute path on purpose: Homebrew's swift shim injects flags that break
+    # @Observable macro expansion under strict concurrency.
+    system "/usr/bin/swift", "build", "-c", "release", "--disable-sandbox"
     bin.install ".build/release/Cachewatch" => "cachewatch"
   end
 
