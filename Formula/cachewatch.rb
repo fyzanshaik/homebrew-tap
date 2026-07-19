@@ -1,16 +1,15 @@
 class Cachewatch < Formula
   desc "Menu bar observability for Claude Code sessions: cache TTLs, quota, memory"
   homepage "https://github.com/fyzanshaik/cachewatch"
-  url "https://github.com/fyzanshaik/cachewatch/releases/download/v0.1.1/cachewatch-0.1.1-arm64.tar.gz"
-  sha256 "654af71de18a5f859796e0690cf13ecef2e7936d057fe796ae0588908ba644d3"
+  url "https://github.com/fyzanshaik/cachewatch/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "bdf66de221bf084057705f56b9c06a3475d4270b5be49c186f5e50214c830e4b"
   license "MIT"
-  version "0.1.1"
 
-  depends_on arch: :arm64
   depends_on macos: :sequoia
 
   def install
-    bin.install "cachewatch"
+    system "swift", "build", "-c", "release", "--disable-sandbox"
+    bin.install ".build/release/Cachewatch" => "cachewatch"
   end
 
   def caveats
