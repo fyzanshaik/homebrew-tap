@@ -2,6 +2,7 @@ class Cachewatch < Formula
   desc "Menu bar observability for Claude Code sessions: cache TTLs, quota, memory"
   homepage "https://github.com/fyzanshaik/cachewatch"
   url "https://github.com/fyzanshaik/cachewatch/releases/download/v0.2.0/cachewatch-0.2.0-macos-arm64.tar.gz"
+  version "0.2.0"
   sha256 "495bcd6d2d9f940f53095cc7d03b1635789ec1b38c6a02f2a72935a49403b827"
   license "MIT"
 
